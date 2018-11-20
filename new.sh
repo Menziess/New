@@ -30,3 +30,10 @@ cd $name && rm -rf .git && git init &&
 echo -e "${GREEN}"$name "${WHITE}has been created" &&
 make help
 
+read -r -p "Do you wish to open the project in vscode? [Y/n] " input
+
+case $input in
+    [yY][eE][sS]|[yY])
+ code .
+ ;;
+esac
