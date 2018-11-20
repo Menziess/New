@@ -25,7 +25,8 @@ fi
 # Creating new project
 echo -e "Creating new project: ${GREEN}$name${WHITE}"
 mkdir $name &&
-git clone https://github.com/Menziess/New $name &&
+git clone git@github.com:Menziess/New.git $name &&
+
 cd $name && rm -rf .git && git init &&
 echo -e "${GREEN}"$name "${WHITE}has been created" &&
 make help
