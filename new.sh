@@ -26,8 +26,9 @@ fi
 echo -e "Creating new project: ${GREEN}$name${WHITE}"
 mkdir $name &&
 git clone git@github.com:Menziess/New.git $name &&
-
 cd $name && rm -rf .git && git init &&
+touch .env && echo "APP_NAME="$name >> .env &&
+cp .gitignore .dockerignore &&
 echo -e "${GREEN}"$name "${WHITE}has been created" &&
 make help
 
