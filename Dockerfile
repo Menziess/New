@@ -1,9 +1,15 @@
 FROM python:latest
+
 WORKDIR /app
+
+COPY Pipfile /app
+COPY Pipfile.lock /app
+
+RUN pip install pipenv
+RUN pipenv install -d --system
+
 COPY . /app
-RUN apt update && \
-  apt install -y python-pip && \
-  pip install -v ptvsd==3.0.0
 
 EXPOSE 3000
-CMD python -u hello.py
+
+CMD ["python","-u","src/main.py"]
