@@ -1,14 +1,12 @@
 {
-  "python.formatting.provider": "autopep8",
+  "pythonTestExplorer.testFramework": "pytest",
+  "python.unitTest.pyTestEnabled": true,
   "python.linting.pylintEnabled": false,
   "python.linting.mypyEnabled": true,
-  "python.unitTest.unittestEnabled": false,
-  "python.unitTest.pyTestEnabled": false,
-  "python.unitTest.nosetestsEnabled": false,
+  "python.formatting.provider": "autopep8",
   "files.watcherExclude": {
     "**/__pycache__/*/**": true,
     "**/.pytest_cache/*/**": true,
     "**/venv/*/**": true,
-  },
-  "python.pythonPath": "/home/stefan/.local/share/virtualenvs/New-7MxGHbXw/bin/python"
+  }
 }
