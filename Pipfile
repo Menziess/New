@@ -4,9 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-ptvsd = "3.0.0"
+ptvsd = "==3.0.0"
 mypy = "*"
 autopep8 = "*"
+pybuilder = "*"
+pybuilder-pytest = "*"
+pybuilder-pytest-coverage = "*"
 
 [packages]
 
