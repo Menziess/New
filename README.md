@@ -1,5 +1,9 @@
 So far...
 
-- docker image is built
-- makefile can run dev docker container with volume mounted pointning to codebase
+- `bash new` allows you to build a new project
+- the makefile commands are printed out, allowing you to:
+  - run unittests
+  - build the project locally
+  - build and run a dev docker image
+  - build and run a dev docker stack
 

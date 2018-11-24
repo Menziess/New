@@ -7,6 +7,18 @@ WHITE=\033[0m
 help:
 	@echo "Work in progress: ${GREEN}test${WHITE}"
 
+init:
+	pipenv install -d
+	pipenv shell
+
+test:
+	pytest
+
+build:
+	pyb
+
+build:
+	pyb
 
 dev:
 	docker build --rm -f "Dockerfile" -t new:latest .
