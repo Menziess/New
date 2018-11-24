@@ -11,10 +11,14 @@ So far...
 Todo
 
 - auto reload in docker dev
-- spark example
-- ci-cd
 - run any type of application using a script, without having to change docker image
 
 Finally
 
+- spark example
+- ci-cd: build docker container
 - write concise readme about data engineering
+
+Improvements
+
+- test modules have to be imported relative from the root

@@ -22,6 +22,9 @@ if [ -z "$name" ]
     exit 1
 fi
 
+# Exports
+export APP_NAME=$name
+
 # Creating new project
 echo -e "Creating new project: ${GREEN}$name${WHITE}"
 mkdir $name &&
@@ -29,12 +32,6 @@ git clone git@github.com:Menziess/New.git $name &&
 
 # Init new git repository
 cd $name && rm -rf .git && git init &&
-
-# Populate env file
-touch .env &&
-echo "APP_NAME="$name >> .env &&
-echo "PYTHONPATH=src/main/python" >> .env &&
-source .env &&
 
 # Update makefile
 envsubst < "Makefile.sh" > "Makefile" &&

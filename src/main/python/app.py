@@ -1,25 +1,5 @@
 import time
-
-
-def hello_printer(i: int) -> str:
-    """
-    Prints hello.
-
-    Prints hello and appends the number passed.
-
-    Parameters
-    ----------
-    i : int
-        The number that is appended to the message
-
-    Returns
-    -------
-    str
-        The hello message
-
-    """
-    time.sleep(1)
-    return f"Hello {i}"
+import greeter
 
 
 def main(count=0):
@@ -28,7 +8,7 @@ def main(count=0):
     """
     while True:
         count += 1
-        print(hello_printer(count))
+        print(greeter.greet(count))
 
 
 if __name__ == "__main__":

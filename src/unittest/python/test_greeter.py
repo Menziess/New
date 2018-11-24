@@ -1,4 +1,4 @@
-from app import hello_printer
+from src.main.scripts.greeter import greet
 import pytest
 
 
@@ -12,4 +12,4 @@ def test_trivial():
     (100, "Hello 100")
 ))
 def test_hello_printer(i, expected):
-    assert hello_printer(i) == expected
+    assert greet(i) == expected
