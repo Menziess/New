@@ -36,12 +36,12 @@ echo "APP_NAME="$name >> .env &&
 echo "PYTHONPATH=src/main/python" >> .env &&
 source .env &&
 
-# Genreate dockerignore file
-cp .gitignore .dockerignore &&
-
 # Update makefile
 envsubst < "Makefile.sh" > "Makefile" &&
 rm Makefile.sh &&
+
+# Genreate dockerignore file
+cp .gitignore .dockerignore &&
 
 # Print makefile commands
 echo -e "${GREEN}"$name "${WHITE}has been created" &&
