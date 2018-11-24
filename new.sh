@@ -26,12 +26,28 @@ fi
 echo -e "Creating new project: ${GREEN}$name${WHITE}"
 mkdir $name &&
 git clone git@github.com:Menziess/New.git $name &&
+
+# Init new git repository
 cd $name && rm -rf .git && git init &&
-touch .env && echo "APP_NAME="$name >> .env &&
+
+# Populate env file
+touch .env &&
+echo "APP_NAME="$name >> .env &&
+echo "PYTHONPATH=src/main/python" >> .env &&
+source .env
+
+# Genreate dockerignore file
 cp .gitignore .dockerignore &&
+
+# Update makefile
+envsubst < "Makefile.sh" > "Makefile" &&
+rm Makefile.sh &&
+
+# Print makefile commands
 echo -e "${GREEN}"$name "${WHITE}has been created" &&
 make help
 
+# Open vscode
 read -r -p "Do you wish to open the project in vscode? [Y/n] " input
 
 case $input in
