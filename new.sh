@@ -34,7 +34,7 @@ cd $name && rm -rf .git && git init &&
 touch .env &&
 echo "APP_NAME="$name >> .env &&
 echo "PYTHONPATH=src/main/python" >> .env &&
-source .env
+source .env &&
 
 # Genreate dockerignore file
 cp .gitignore .dockerignore &&
