@@ -11,8 +11,10 @@ pybuilder = "*"
 pybuilder-pytest = "*"
 pybuilder-pytest-coverage = "*"
 pytest = "*"
+pylint = "*"
 
 [packages]
+pyspark = "*"
 
 [requires]
 python_version = "*"

@@ -11,4 +11,4 @@ COPY . /app
 
 EXPOSE 3000
 
-CMD ["python", "-u","src/main/python/app.py"]
+ENTRYPOINT [ "/bin/sh", "-c" ]
