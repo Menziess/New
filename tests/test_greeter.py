@@ -1,4 +1,4 @@
-from src.main.scripts.greeter import greet
+from .src.main.scripts.greeter import greet
 import pytest
 
 
