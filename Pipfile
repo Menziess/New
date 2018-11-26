@@ -12,6 +12,7 @@ pybuilder-pytest = "*"
 pybuilder-pytest-coverage = "*"
 pytest = "*"
 pylint = "*"
+pytest-pythonpath = "*"
 
 [packages]
 pyspark = "*"
