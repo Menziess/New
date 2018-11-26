@@ -19,12 +19,7 @@ help:
 	@echo "By github/menziess"
 
 init:
-	pipenv install -d
 	pipenv shell
-
-clean:
-	pyb clean -c
-	rm -rf .pytest_cache/ .mypy_cache/ __pycache__
 
 lint:
 	mypy . --ignore-missing-imports
@@ -32,9 +27,18 @@ lint:
 test:
 	pytest
 
+clean:
+	pyb clean -c
+	find . \( -name __pycache__ -o -name "*.pyc" -o -name __init__.py \) -delete
+	rm -rf .pytest_cache/ .mypy_cache/
+
 build:
 	pyb -c
 	docker build --rm -f "Dockerfile" -t new:latest .
 
+clean-build:
+	make clean
+	make build
+
 dev:
-	docker run --rm -it -p 3000:3000/tcp -v $$(pwd):/app/src new:latest bash
+	docker run --rm -it -p 3000:3000/tcp -v $$(pwd):/app new:latest bash
