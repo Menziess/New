@@ -1,7 +1,7 @@
 {
   "pythonTestExplorer.testFramework": "pytest",
   "python.unitTest.pyTestEnabled": true,
-  "python.linting.pylintEnabled": false,
+  "python.linting.pylintEnabled": true,
   "python.linting.mypyEnabled": true,
   "python.formatting.provider": "autopep8",
   "files.watcherExclude": {
