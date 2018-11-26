@@ -10,5 +10,3 @@ RUN pipenv install -d --system --deploy --ignore-pipfile
 COPY . /app
 
 EXPOSE 3000
-
-ENTRYPOINT [ "/bin/sh", "-c" ]

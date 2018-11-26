@@ -37,4 +37,4 @@ build:
 	docker build --rm -f "Dockerfile" -t new:latest .
 
 dev:
-	docker run --rm -it -p 3000:3000/tcp -v $$(pwd):/app/src new:latest bash -c
+	docker run --rm -it -p 3000:3000/tcp -v $$(pwd):/app/src new:latest bash
