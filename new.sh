@@ -28,7 +28,7 @@ export APP_NAME=$name
 # Creating new project
 echo -e "Creating new project: ${GREEN}$name${WHITE}"
 mkdir $name &&
-git clone git@github.com:Menziess/New.git $name &&
+git clone https://github.com/Menziess/New.git $name &&
 
 # Init new git repository
 cd $name && rm -rf .git && git init &&
