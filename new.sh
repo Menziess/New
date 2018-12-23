@@ -40,6 +40,9 @@ rm Makefile.sh &&
 # Genreate dockerignore file
 cp .gitignore .dockerignore &&
 
+# Generate .pylintrc
+pylint --generate-rcfile > .pylintrc
+
 # Print makefile commands
 echo -e "${GREEN}"$name "${WHITE}has been created" &&
 make help
