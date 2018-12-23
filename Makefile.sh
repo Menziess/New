@@ -1,6 +1,6 @@
 
 help:
-	@echo "Tasks in \033[1;32mData-Engineer-Template\033[0m:"
+	@echo "Tasks in \033[1;32m${APP_NAME}\033[0m:"
 	@echo "    init"
 	@echo "        Install and activate project environment."
 	@echo "    clean"
@@ -12,9 +12,7 @@ help:
 	@echo "    build"
 	@echo "        Run pybuilder build command."
 	@echo "    dev"
-	@echo "        Build Data-Engineer-Template and run development docker container."
-	@echo "    dev-stack"
-	@echo "        Build Data-Engineer-Template and run development docker stack."
+	@echo "        Build ${APP_NAME} and run development docker container."
 	@echo ""
 	@echo "By github/menziess"
 
