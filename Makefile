@@ -1,6 +1,6 @@
 
 help:
-	@echo "Tasks in \033[1;32m${APP_NAME}\033[0m:"
+	@echo "Tasks in \033[1;32mData-Engineer-Template\033[0m:"
 	@echo "    init"
 	@echo "        Install and activate project environment."
 	@echo "    clean"
@@ -12,9 +12,9 @@ help:
 	@echo "    build"
 	@echo "        Run pybuilder build command."
 	@echo "    dev"
-	@echo "        Build ${APP_NAME} and run development docker container."
+	@echo "        Build Data-Engineer-Template and run development docker container."
 	@echo "    dev-stack"
-	@echo "        Build ${APP_NAME} and run development docker stack."
+	@echo "        Build Data-Engineer-Template and run development docker stack."
 	@echo ""
 	@echo "By github/menziess"
 
@@ -41,4 +41,16 @@ clean-build:
 	make build
 
 dev:
-	docker run --rm -it -p 3000:3000/tcp -v $$(pwd):/app new:latest bash
+	docker run --rm -it \
+	-e FLASK_ENV=development \
+	-p 3000:3000/tcp \
+	-p 80:80 \
+	-v $$(pwd):/app \
+	new:latest
+
+run:
+	docker run --rm -it \
+	-e FLASK_ENV=production \
+	-p 80:80 \
+	-v $$(pwd):/app \
+	new:latest
