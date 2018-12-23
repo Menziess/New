@@ -1,4 +1,22 @@
-# New-Py
+# New
+
+## 1. Installation
+
+Install dependencies with pipenv:
+
+    pipenv install -d
+
+If pipenv can not be found, install pipenv using pip.
+
+## 2. Development
+
+Print a list of available commands:
+
+    make help
+
+Before running any command, clean the project with `make clean` just in case.
+
+## 3. Work In Progress
 
 This repository demonstrates a workflow that allows you to:
 - develop and run code within a docker container
@@ -19,12 +37,5 @@ So far...
 Todo
 
 - run any type of application using a script, without having to change docker image
-
-Finally
-
 - ci-cd: build docker container
-- write concise readme about data engineering
-
-Improvements
-
-- test modules have to be imported relative from the root
+- test modules are currently imported relative from the root
